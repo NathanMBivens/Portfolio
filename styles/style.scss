@@ -1,0 +1,41 @@
+
+
+@import './mixins/_LCMIXINS';
+@import './normalize';
+@import './navigation_nb';
+@import './banner_nb';
+@import './about_nb';
+@import './expertise_nb';
+@import './work_nb';
+@import './contact_nb';
+@import './footer_nb';
+  @import url("https://use.typekit.net/vcr5hea.css");
+
+
+@font-face {
+  font-family: 'proxima-nova', sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+
+h1 {
+  font-weight: 500;
+  font-size: 21px;
+
+}
+
+html {
+  font-family: 'proxima-nova', 'Proxima Nova';
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+*:focus {
+  outline: 0;
+}

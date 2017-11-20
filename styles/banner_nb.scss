@@ -1,0 +1,60 @@
+
+.banner-section {
+  height: 700px;
+  position: relative;
+}
+
+.banner-container {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-description {
+  font-size: 25px;
+  font-weight: 800;
+  color: $nbBlue;
+}
+
+
+@include for-phone-only {
+  .banner-section {
+    height: 400px;
+    background-position: left !important;
+  }
+
+  .banner-container {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+
+  .banner-description {
+    font-size: 18px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .banner-description:nth-child(1) {
+    margin-bottom: 10px;
+  }
+
+
+};
+
+
+@include from-tablet-to-desktop {
+  .banner-section {
+    height: 450px;
+  }
+
+  .banner-container {
+    height: 550px;
+  }
+
+};

@@ -1,0 +1,135 @@
+
+
+.contact-section {
+  height: 175px;
+  position: relative;
+  background: $nbBlueDark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 5% 15%;
+}
+
+
+  .contact-text-section {
+    margin-bottom: 45px;
+  }
+
+  .contact-container {
+    display: grid;
+  }
+
+.contact-item {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+
+  textarea {
+    height: 150px;
+    resize: none;
+    align-self: center;
+    justify-self: center;
+    color: $nbLightGray;
+  }
+
+  textarea::placeholder {
+    color: $nbLightGray;
+  }
+
+
+  input::placeholder {
+    color: $nbLightGray;
+    background: transparent;
+  }
+
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background: transparent !important;
+  }
+
+}
+
+
+
+.contact-header {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: $nbLightGray;
+}
+
+.contact-subheader {
+  text-align: center;
+  color: $nbLightGray;
+}
+
+.contact-input {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: $nbLightGray;
+  background: transparent;
+  align-self: center;
+  justify-self: center;
+  color: $nbLightGray;
+  font-weight: 200;
+  font-size: 15px;
+
+}
+
+.submit-button {
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  border-radius: 25px;
+  border-width: 4px;
+  background: transparent;
+  border-color: $nbLightGray;
+  padding: 10px;
+  border-style: solid;
+  font-weight: 600;
+  color: $nbLightGray;
+  font-size: 18px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    border-color: $nbWhite;
+    color: $nbBlueDark;
+    background-color: $nbWhite;
+    padding: 10px 13px;
+  }
+}
+
+@include for-phone-only {
+
+  .contact-header {
+    font-size: 21px;
+  }
+  .contact-subheader {
+    font-size: 14px;
+  }
+
+  .contact-text-section {
+      margin-bottom: 25px;
+  }
+
+  .contact-item {
+    width: 70%;
+    .contact-input {
+      width: 100% !important;
+    }
+    .submit-button {
+      width: 100%;
+      justify-self: flex-start;
+    }
+  }
+
+  .contact-section {
+    padding: 15px;
+  }
+
+};

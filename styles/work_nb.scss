@@ -1,0 +1,177 @@
+
+
+.work-section {
+  height: 1700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-section-title {
+  @extend .expertise-title;
+  margin: 70px 0 20px 0;
+}
+
+.work-container {
+  display: grid;
+
+}
+
+.single-work {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 80px;
+  align-self: center;
+  justify-self: center;
+}
+
+.work-text-container {
+  align-self: center;
+  justify-self: flex-start;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.work-title {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.work-description {
+  font-size: 15px;
+}
+
+
+.work-picture {
+  height: 400px;
+  width: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: flex-end;
+  margin-right: -20%;
+}
+
+.work-button {
+  margin-top: 15px;
+  border-width: 3px;
+  border-radius: 45px;
+  border-color: $nbBlue;
+  border-style: solid;
+  text-align: center;
+  width: 75px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: $nbBlue;
+  background: transparent;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+  color: $nbLightGray;
+  background: $nbBlue;
+  border-color: $nbBlueDark;
+  padding: 5px 12px;
+  }
+}
+
+@include for-phone-only {
+  .single-work {
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 45px;
+  }
+
+  .work-section {
+    height: 1150px;
+  }
+
+  .work-container {
+    width: 100%;
+  }
+
+  .work-picture {
+    justify-self: center;
+    height: 200px;
+    width: 300px;
+    margin-right: 0;
+  }
+
+  .work-text-container {
+    margin-left: 0;
+    justify-self: center;
+  }
+
+  .work-title {
+    text-align: center;
+  }
+
+  .work-button {
+    align-self: center;
+    padding: 8px 15px;
+    width: 60%;
+
+    &:hover {
+      padding: 8px 20px;
+    }
+  }
+
+  .work-section-title {
+    margin: 60px 0 35px 0;
+  }
+};
+
+@include from-tablet-to-desktop {
+
+  .single-work {
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 35px;
+  }
+
+  .work-section {
+    height: 1650px;
+  }
+
+  .work-container {
+    width: 100%;
+  }
+
+  .work-picture {
+    justify-self: center;
+    height: 350px;
+    width: 600px;
+    margin-right: 0;
+  }
+
+  .work-text-container {
+    margin-left: 0;
+    justify-self: center;
+  }
+
+  .work-description {
+    text-align: center;
+  }
+
+  .work-title {
+    text-align: center;
+
+  }
+
+  .work-button {
+    align-self: center;
+    font-size: 16px;
+    padding: 10px 15px;
+
+    &:hover {
+      padding: 10px 20px;
+    }
+  }
+
+  .work-section-title {
+    margin: 55px 0 45px 0;
+
+  }
+};
