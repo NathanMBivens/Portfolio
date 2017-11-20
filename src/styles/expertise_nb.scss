@@ -1,0 +1,84 @@
+
+
+.expertise-section {
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: $nbLightGray;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3%;
+}
+
+.expertise-title {
+  align-self: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: $nbBlack;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.expertise-container {
+  display: grid;
+  align-self: flex-start;
+
+  .expertise-icon {
+    color: $nbBlueDark;
+    margin-bottom: 30px;
+  }
+
+  .expertise-description-title {
+    font-size: 21px;
+    font-weight: 500;
+
+    margin-bottom: 10px;
+  }
+
+  .expertise-description {
+    width: 75%;
+    text-align: center;
+    font-weight: 200;
+    color: $nbDarkGrayDark;
+  }
+}
+
+.expertise-description-title, .expertise-description, .expertise-icon {
+  align-self: center;
+  justify-self: center;
+}
+
+
+@include for-phone-only {
+
+
+  .expertise-section {
+    height: 1100px;
+
+
+  }
+  .expertise-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .expertise-title {
+    margin-bottom: 100px;
+  }
+
+  .expertise-container {
+    margin-bottom: 75px;
+  }
+};
+
+@include from-tablet-to-desktop {
+  .expertise-container {
+  padding: 0 5px;
+
+  }
+};
